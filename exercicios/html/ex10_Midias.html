@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <title>Exercicio 10 Midias</title>
+
+
+<body>
+  <video src="video.mp4" controls width="400"></video><br>
+ 
+  <audio controls preload="metadata" id="dj_jonas">
+    <source src="musica3.mp3" type="audio/mpeg">
+    <source src="musica2.mp3" type="audio/mpeg">
+    <source src="musica.mp3" type="audio/mpeg">
+  </audio>
+  
+
+  <script>
+  const audioElement = document.getElementById('dj_jonas');
+  const musicList = ['musica3.mp3', 'musica2.mp3', 'musica.mp3'];
+  let currentIndex = 0;
+
+  audioElement.src = musicList[currentIndex];
+  audioElement.play();
+
+  audioElement.addEventListener('ended', () => {
+    currentIndex++;
+    if (currentIndex < musicList.length) {
+      audioElement.src = musicList[currentIndex];
+      audioElement.play();
+    } else {
+      currentIndex = 0; // Loop back to the first music
+      audioElement.src = musicList[currentIndex];
+      audioElement.play();
+    }
+  });
+  </script>
+
+</body>
+
+</html>

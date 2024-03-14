@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <title>Exercicio 12 - Formulários</title>
+
+<body>
+
+  <form action="" method="post">
+    <fieldset>
+      <legend>Dados Gerais</legend>
+      <label for="nome">Nome</label>
+      <input type="text" minlength="3" id="nome" name="nome">
+
+      <label for="data_nascimento">Data de Nascimento</label>
+      <input type="date" id="data_nascimento" name="data_nascimento">
+
+      <label for="cpf">CPF</label>
+      <input type="text" id="cpf" name="cpf">
+    </fieldset>
+
+    <fieldset>
+      <legend>Endereço</legend>
+      <label for="tipo_endereco">Tipo</label>
+      <select id="tipo_endereco" name="tipo_endereco">
+        <option value="">Selecione</option>
+        <option value="">Rua</option>
+        <option value="">Estrada</option>
+        <option value="">Rodovia</option>
+        <option value="">Outros</option>
+      </select>
+
+      <label for="logradouro_endereco">Lgradouro</label>
+      <input type="text" id="logradouro_endereco" name="logradouro_endereco">
+
+      <label for="numero_endereco">Número</label>
+      <input type="text" id="numero_endereco" name="numero_endereco">
+
+      <label for="complemento">Complemento</label>
+      <input type="text" id="complemento" name="complemento">
+    </fieldset>
+
+    <fieldset>
+      <Legend>Fale Conosco</Legend>
+      <label for="msg">Mensagem</label>
+     <textarea name="" id="msg" cols="30" rows="10"></textarea>
+    </fieldset>
+<!-- Campos acrescentados das proximas aulas -->
+<fieldset>
+  <legend>Linguagem favorita</legend>
+  <label for="fav_language">Marque a sua linguagem favorita</label>
+  <input type="radio" name="fav_language" id="html">
+  <label for="html">HTML</label>
+  <input type="radio" name="fav_language" id="css">
+  <label for="css">CSS</label>
+  <input type="radio" name="fav_language" id="php">
+  <label for="php">PHP</label>
+  <input type="radio" name="fav_language" id="python">
+  <label for="python">Python</label>
+</fieldset>
+<!-- fim da alteração -->
+
+    <fieldset>
+      <button type="submit">Enviar sua mensagem</button>
+      <button type="reset">Limpe o Formulário</button>
+    </fieldset>
+  </form>
+
+
+</body>
+
+</html>
